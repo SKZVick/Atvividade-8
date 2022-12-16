@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: #d9d9d9;
+        font-family: 'Trebuchet MS';
+        padding-top: 30px;
+        padding-left: 350px;
+        align-content: center;
+    }
+</style>
+<link rel="icon" href="download.png">
+<body>
+    <script>
+        let saldo = prompt ("Digite seu saldo atual: ");
+        let valor = prompt("Qual é o valor da sua compra? ")
+        if (saldo > valor ){
+            document.write("Saldo suficiente!")
+        }
+        else if(saldo < valor ){
+            document.write("Saldo insuficiente!")
+        }
+        </script>
+
+        <form>
+        <br>
+        <input type="text" placeholder="Digite o primeiro numero" id="num1">
+        <input type="text" placeholder="Digite o segundo numero" id="num2">
+        <input type="text" placeholder= "Digite a operação + - / * " id="oper">
+        <button class="mybutton"> Calcular </button>
+        <br>
+        </form>
+
+        <script>
+        let botao = document.getElementsByClassName('mybutton')[0];
+        botao.onclick = function(e){
+        let num1 =  Number(document.getElementById('num1').value);
+        let num2 =  Number(document.getElementById('num2').value);
+        let oper = document.getElementById('oper').value;
+        if (oper === '+'){
+        alert(num1 + num2);}
+        else if(oper === '-'){
+        alert(num1 - num2);}
+        else if( oper === '/'){
+        alert(num1 / num2);}
+        else if (oper === '*') {
+        alert(num1 * num2);}
+        else {
+        alert('operação inválida');}
+        e.preventDefault();
+}
+</script>
+
+</body>
+</html>
